@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.homeBody {
+    margin-top: 50px;
+    background-color: #222FE6;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-family: "Red Hat Display";
+    overflow: hidden;
+}
+  
+.header {
+    display: flex;
+    margin:8px 70px 0px 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.profession {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-size: 27px;
+  }
+  
+.square {
+    width: 64px;
+    height: 64px;
+    border: 4px solid #FD7B01;
+    margin-right: 20px;
+}
+  
+.senai{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container{
+    margin-left: 400px;
+}
+.title {
+    font-size: 140px; 
+    font-weight: bold;
+    line-height:116px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.line1{
+    border: 0;
+    height: 4px;
+    background: #FD7B01;
+    margin: 20px 0;
+    width: 62%;
+    margin-bottom: 30px;
+}
+
+.line2{
+    border: 0;
+    height: 4px;
+    background: #FD7B01;
+    margin: 20px 0;
+    width: 36%;
+    transform: rotate(90deg); 
+    position: absolute; 
+    top: calc(65% - 10px); 
+    right: 76.4%; 
+}
+
+.Tm{
+    font-weight:300;
+}
+
+.highlight{
+    display: block; 
+    align-items: center;
+    padding-right: 200px;
+}
+
+.descubra {
+    padding: 10px 170px;
+    background-color: #FD7B01; 
+    color: white;
+    border: none;
+    border-radius:60px;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.descubra:hover {
+    background-color: #FD7B01;
+    color: white;
+}

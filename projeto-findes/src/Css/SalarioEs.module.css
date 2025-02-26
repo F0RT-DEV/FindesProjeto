@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+.SalarioEstimadoBody {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container4{
+    margin:0;
+
+    .header {
+        line-height: 135px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    p {
+        font-size: 90px;
+        color: #003c64;
+        line-height: 90px;
+        font-family: "Red Hat Display", sans-serif;
+    }
+    
+    .header span{
+        font-weight: bold;
+    }
+    
+    .buttuns{
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 200px 0px 200px;
+    
+        a{
+            display: flex;
+            align-items: center;
+            margin: 0px 10px 0px 10px;
+            font-size: 30px;
+            color: #003c64;
+            font-weight: bold;
+        }
+        button{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .buttuns button {
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: transparent
+    }
+    
+    .options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .option {
+        font-family: 'red hat display', sans-serif;
+        background-color: #FD7B01;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        height: 160px;
+        width: 50%;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: auto;
+    }
+}
