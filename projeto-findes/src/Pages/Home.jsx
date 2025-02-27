@@ -12,7 +12,7 @@ function Home() {
 }, []);
 
   return (
-    <div className="home">
+    <div className={Styles.ContainerM}>
       <div className={Styles.header}>
         <div className={Styles.profession}>
           <div className={Styles.square}></div>
@@ -22,7 +22,7 @@ function Home() {
         <div className={Styles.senai}>SENAI<br /> NO SEU <br />FUTURO</div>
       </div>
       <hr className={Styles.line2} />
-      <div className={Styles.container}>
+      <div className={Styles.container7}>
       <div className={Styles.title}>
         O QUE<br />
         <span className={Styles.highlight}>EU</span>
