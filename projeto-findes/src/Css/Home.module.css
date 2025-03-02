@@ -2,7 +2,7 @@
 
 .homeBody {
     margin-top: 50px;
-    background-color: #444edb;
+    background-color: #222fe6;
     color: white;
     font-family: "Red Hat Display";
     overflow: hidden;
@@ -100,7 +100,36 @@
     color: white;
 }
 
-@media (min-width: 1325px) {
+@keyframes slideIn1 {
+    from {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .container7 {
+    animation: slideIn1 0.9s ease-out forwards; 
+  }
+
+@keyframes slideIn2 {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+  }
+  
+  .animate {
+    animation: slideIn2 0.9s ease-out forwards;
+}
+@media (max-width: 1325px) {
     .homeBody {
         margin-top: 30px;
         background-color: #444edb;
@@ -120,12 +149,12 @@
     .profession {
         display: flex;
         align-items: center;
-        font-size: 22px; /* Reduz tamanho do texto */
+        font-size: 22px;
         margin-left: 20px;
     }
 
     .square {
-        width: 50px; /* Reduz tamanho do quadrado */
+        width: 50px;
         height: 50px;
         border: 3px solid #FD7B01;
         margin-right: 15px;
@@ -144,7 +173,7 @@
     }
 
     .title {
-        font-size: 140px; /* Reduz tamanho da fonte */
+        font-size: 140px;
         line-height: 100px;
         display: flex;
         flex-direction: column;
@@ -154,8 +183,8 @@
     }
 
     .line1 {
-        width: 80%; /* Aumenta a largura da linha */
-        height: 3px; /* Ajusta altura */
+        width: 80%; 
+        height: 3px; 
     }
 
     .line2 {
@@ -170,7 +199,7 @@
     }
 
     .descubra {
-        padding: 8px 120px; /* Ajusta tamanho do botão */
+        padding: 8px 120px;
         font-size: 40px;
     }
 }
