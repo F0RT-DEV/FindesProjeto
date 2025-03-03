@@ -57,7 +57,72 @@
     width: 90%;
     margin: 40px 10px 10px 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
     font-size: 25px;
 }
 
+.option:hover {
+    transform: scale(1.09);
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 3;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 3;
+    }
+}
+
+.options {
+    animation: slideIn 1s ease-out forwards; 
+}
+
+.option {
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideInRight2 {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+  }
+  
+
+  .fadeOut1 {
+    animation: slideInRight2 0.9s ease-out forwards;
+  }
+
+  @keyframes slideUpExit {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
+  
+  .exitAnimation2 {
+    animation: slideUpExit 0.8s ease-in-out forwards;
+  }

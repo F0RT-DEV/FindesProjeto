@@ -59,25 +59,53 @@ function Cursos() {
         };
     }, []);
 
+
+const [isAnimating, setIsAnimating] = useState(false);
+const [animationKey, setAnimationKey] = useState(0);
+const [animationDirection, setAnimationDirection] = useState(""); 
+const [titleAnimation, setTitleAnimation] = useState("");
+const [isExiting, setIsExiting] = useState(false);
+const [isExiting2, setIsExiting2] = useState(false);
+
     const [currentPage, setCurrentPage] = useState(0);
     const navigate = useNavigate();
 
     const changePage = (page) => {
-        if (page < 0 || page >= cursosOption.length) return;
-        setCurrentPage(page);
+        if (page >= 0 && page < cursosOption.length) {
+            const horizontalAnimation = page > currentPage ? Styles.slideInRight : Styles.slideInLeft;
+    
+            setAnimationDirection(horizontalAnimation);
+            
+            setIsAnimating(true);
+    
+            setTimeout(() => {
+                setTitleAnimation("");
+                setCurrentPage(page);
+                setAnimationKey(prevKey => prevKey + 1);
+    
+                setTimeout(() => {
+                    setTitleAnimation(Styles.slideUp2);
+                }, 20);
+            }, 100);
+        }
     };
-
+    
     const selectOption = (option) => {
-        alert(`Opção selecionada: ${option}`);
-        localStorage.setItem('selectedCourse', option);
-        localStorage.setItem('salaryRange', salaryRanges[option]);
-        navigate('/salarioEstimado'); // Redireciona para a página de salário
+        setIsExiting(true);
+        setIsExiting2(true);
+    
+        setTimeout(() => {
+            localStorage.setItem('selectedCourse', option);
+            localStorage.setItem('salaryRange', salaryRanges[option]);
+            navigate('/salarioEstimado');
+        }, 400);
     };
-
     return (
         <div className={Styles.container3}>
             <div className={Styles.header}>
-                <h1>Quais <span>Cursos<br />Você Gostaria?</span></h1>
+            <h1 key={animationKey} className={`${titleAnimation} ${isExiting2 ? Styles.exitAnimation2 : ""}`}>
+    Quais <span>Cursos<br />Você Gostaria?</span>
+</h1>
                 <p>MARQUE A OPÇÃO QUE MELHOR SE<br />ENCAIXA AOS <span>CURSOS QUE VOCÊ<br /> GOSTARIA DE FAZER NO SENAI</span></p>
             </div>
             <div className={Styles.buttuns}>
@@ -88,13 +116,26 @@ function Cursos() {
                 <g clip-path="url(#clip0_59_8)"><path d="M22.076 20.7687L6.11976 0.38125C5.93226 0.1375 5.63851 0 5.33226 0H0.501011C0.0822611 0 -0.148989 0.48125 0.107261 0.80625L16.6948 22L0.107261 43.1937C0.0495533 43.2674 0.0137468 43.3559 0.00393502 43.449C-0.00587676 43.542 0.0107027 43.636 0.051777 43.7201C0.0928513 43.8042 0.156763 43.8751 0.236205 43.9246C0.315647 43.9741 0.407413 44.0002 0.501011 44H5.33226C5.63851 44 5.93226 43.8563 6.11976 43.6188L22.076 23.2375C22.6448 22.5062 22.6448 21.4937 22.076 20.7687ZM41.076 20.7687L25.1198 0.38125C24.9323 0.1375 24.6385 0 24.3323 0H19.501C19.0823 0 18.851 0.48125 19.1073 0.80625L35.6948 22L19.1073 43.1937C19.0496 43.2674 19.0137 43.3559 19.0039 43.449C18.9941 43.542 19.0107 43.636 19.0518 43.7201C19.0929 43.8042 19.1568 43.8751 19.2362 43.9246C19.3156 43.9741 19.4074 44.0002 19.501 44H24.3323C24.6385 44 24.9323 43.8563 25.1198 43.6188L41.076 23.2375C41.6448 22.5062 41.6448 21.4937 41.076 20.7687Z" fill="#FD7B01"/>
                 </g><defs><clipPath id="clip0_59_8"><rect width="42" height="44" fill="white"/></clipPath></defs></svg></button>}
             </div>
-            <div className={Styles.options}>
+
+    <div key={animationKey} className={`${Styles.options} ${animationDirection} ${isExiting ? Styles.exitAnimation : ""}`}>
+    {cursosOption[currentPage].map((curso, index) => (
+        <button 
+            key={index} 
+            className={`${Styles.option} ${isExiting ? Styles.fadeOut : ""}`} 
+            style={{ animationDelay: `${index * 0.2}s` }}
+            onClick={() => selectOption(curso)}
+        >
+            {curso}
+        </button>
+    ))}
+</div>
+            {/* <div className={Styles.options}>
                 {cursosOption[currentPage].map((curso, index) => (
                     <button key={index} className={Styles.option} onClick={() => selectOption(curso)}>
                         {curso}
                     </button>
                 ))}
-            </div>
+            </div> */}
             <div className={Styles.pagination}>
                 {cursosOption.map((_, index) => (
                     <span

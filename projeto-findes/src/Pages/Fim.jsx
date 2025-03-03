@@ -24,7 +24,7 @@ function Fim() {
                     <div className={Styles.square}></div>
                     <span>PROFISSÃO</span>
                 </div>
-                <hr className={Styles.line3} />
+                <hr className={Styles.line1} />
                 <div className={Styles.senai}>SENAI<br /> NO SEU <br />FUTURO</div>
             </div>
             <div className={Styles.containerText}>

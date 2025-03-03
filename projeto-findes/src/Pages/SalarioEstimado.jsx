@@ -24,20 +24,30 @@ function SalarioEstimado() {
     const handleBack = () => {
         navigate("/cursos");
     };
+
+    const [isExiting, setIsExiting] = useState(false);
+    const [isExiting2, setIsExiting2] = useState(false);
     const handleNext = () => {
-        navigate("/fim");
+        setIsExiting(true); 
+    setIsExiting2(true); 
+  
+    setTimeout(() => {
+      navigate('/fim');
+    }, 500); 
     };
 
     return (
         <div>
             <div className={Styles.container4}>
             <div className={Styles.header}>
-                <p>Com <span>Esses Cursos,<br />Você Pode Ganhar</span></p>
+                <h1 className={`${isExiting2 ? Styles.exitAnimation2 : ""}`}>
+                    Com <span>Esses Cursos,<br />Você Pode Ganhar</span>
+                </h1>
             </div>
-            <div className={Styles.options} id="Salario-curso">
+            <div className={`${Styles.options} ${isExiting ? Styles.fadeOut1 : ""}`} id="Salario-curso">
                 <button className={Styles.option} id="salaryButton">{salaryRange}</button>
             </div>
-            <div className={Styles.buttuns}>
+            <div className={`${Styles.buttuns} ${isExiting ? Styles.exitAnimation : ""}`}>
                 <button id="backButton" onClick={handleBack}>
                 <svg width="42" height="44" viewBox="0 0 42 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.0562 22L22.6437 0.80625C22.8999 0.48125 22.6687 0 22.25 0H17.4187C17.1125 0 16.8187 0.14375 16.6312 0.38125L0.674951 20.7687C0.398609 21.1209 0.248413 21.5555 0.248413 22.0031C0.248413 22.4507 0.398609 22.8854 0.674951 23.2375L16.6312 43.6188C16.8187 43.8625 17.1125 44 17.4187 44H22.25C22.6687 44 22.8999 43.5187 22.6437 43.1937L6.0562 22ZM25.0562 22L41.6437 0.80625C41.8999 0.48125 41.6687 0 41.25 0H36.4187C36.1125 0 35.8187 0.14375 35.6312 0.38125L19.6749 20.7687C19.3986 21.1209 19.2484 21.5555 19.2484 22.0031C19.2484 22.4507 19.3986 22.8854 19.6749 23.2375L35.6312 43.6188C35.8187 43.8625 36.1125 44 36.4187 44H41.25C41.6687 44 41.8999 43.5187 41.6437 43.1937L25.0562 22Z" fill="#FD7B01"/>

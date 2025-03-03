@@ -44,13 +44,14 @@
         margin-top: 20px;
     }
     
-    .line1{
-        border: 0;
-        height: 5px;
-        background: #FD7B01;
-        margin: 20px 0;
-        width: 62%;
-        margin-bottom: 30px;
+    .line1 {
+        display: block !important;
+        border: none !important;
+        height: 4px !important;
+        background-color: #FD7B01 !important;
+        margin: 20px auto 30px !important;
+        width: 62% !important;
+        opacity: 100%;
     }
     .containerText{
         display: flex;
@@ -92,3 +93,18 @@
         text-decoration: none;
     }
 }
+
+@keyframes slideUp {
+    from {
+      transform: translateY(70px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 3;
+    }
+  }
+  
+  .title {
+    animation: slideUp 0.8s ease-out forwards;
+  }

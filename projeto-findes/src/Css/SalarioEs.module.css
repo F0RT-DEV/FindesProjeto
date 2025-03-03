@@ -18,11 +18,12 @@
         justify-content: center;
     }
     
-    p {
+    h1 {
         font-size: 90px;
         color: #003c64;
         line-height: 90px;
         font-family: "Red Hat Display", sans-serif;
+        font-weight: 100;
     }
     
     .header span{
@@ -73,3 +74,82 @@
         cursor: auto;
     }
 }
+
+@keyframes slideUp {
+    from {
+      transform: translateY(70px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 3;
+    }
+  }
+  
+  h1 {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  .slideUp2 { 
+    animation: slideUp 0.8s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 3;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 3;
+    }
+}
+
+.options {
+    animation: slideIn 1s ease-out forwards; 
+}
+
+.option {
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideInRight2 {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+  }
+  
+
+  .fadeOut1 {
+    animation: slideInRight2 0.9s ease-out forwards;
+  }
+
+  @keyframes slideUpExit {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
+  
+  .exitAnimation2 {
+    animation: slideUpExit 0.8s ease-in-out forwards;
+  }

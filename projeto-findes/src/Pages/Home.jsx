@@ -4,15 +4,15 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
-  const [isAnimating, setIsAnimating] = useState(false);
-  const navigate = useNavigate();
-
   useEffect(() => {
     document.body.className = Styles.homeBody;
     return () => {
         document.body.className = "";
     };
 }, []);
+
+const [isAnimating, setIsAnimating] = useState(false);
+const navigate = useNavigate();
 
 const handleLinkClick = (e) => {
   e.preventDefault();

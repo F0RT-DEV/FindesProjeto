@@ -129,6 +129,7 @@
   .animate {
     animation: slideIn2 0.9s ease-out forwards;
 }
+
 @media (max-width: 1325px) {
     .homeBody {
         margin-top: 30px;

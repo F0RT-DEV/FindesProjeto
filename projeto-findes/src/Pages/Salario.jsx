@@ -1,5 +1,5 @@
 // src/components/Salario.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Styles from "../Css/Salario.module.css";
 
@@ -13,14 +13,21 @@ function Salario() {
     };
   }, []);
 
+  const [isExiting, setIsExiting] = useState(false);
+  const [isExiting2, setIsExiting2] = useState(false);
   const handleOptionClick = () => {
-    navigate("/cursos"); // Navega para a página "Cursos"
+    setIsExiting(true); 
+    setIsExiting2(true); 
+  
+    setTimeout(() => {
+      navigate('/cursos');
+    }, 500); 
   };
 
   return (
     <div className={Styles.container2}>
       <div className={Styles.header}>
-        <h1>
+        <h1 className={`${isExiting2 ? Styles.exitAnimation2 : ""}`}>
           Qual <span>Sua<br />Faixa Salarial?</span>
         </h1>
         <p>
@@ -28,7 +35,7 @@ function Salario() {
           ENCAIXA AO SEU <span>ATUAL EMPREGO</span>
         </p>
       </div>
-      <div className={Styles.options}>
+      <div className={`${Styles.options} ${isExiting ? Styles.exitAnimation : ""}`}>
         {[
           "Entre 650 e 2.000",
           "Entre 2.000 e 3.500",
@@ -39,7 +46,7 @@ function Salario() {
         ].map((faixa, index) => (
           <button
             key={index}
-            className={Styles.option}
+            className={`${Styles.option} ${isExiting ? Styles.fadeOut1 : ""}`}
             onClick={handleOptionClick}
           >
             {faixa}
