@@ -8,6 +8,142 @@
 }
 
 .container1 {
+    margin: 75px 5vw 0px 5vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: clamp(50px, 6vw, 90px);
+    color: #2B5D8C;
+    font-weight: normal;
+    font-family: "Red Hat Display", sans-serif;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.header h1 span {
+    font-weight: bold;
+}
+
+.header p {
+    margin-top: 40px;
+    color: #2B5D8C;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(16px, 2vw, 23px);
+}
+
+.header p span {
+    font-weight: bolder;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0 5vw 20px 5vw;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: transparent;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 20px;
+    justify-items: center
+}
+
+.option {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #FD7B01;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    height: 75px;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: clamp(18px, 2vw, 25px);
+}
+
+.option:hover {
+    transform: scale(1.09);
+    font-weight: bold;
+}
+
+.pagination {
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 20px);
+    font-family: 'Inter', sans-serif;
+}
+
+.pagination span {
+    margin: 0 5px;
+    cursor: pointer;
+    color: #2B5D8C;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.pagination span:hover {
+    color: #FD7B01;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #FD7B01;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .options {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+  }
+}
+@media (max-width: 480px) {
+  .options {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.profissaoBody {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
     margin: 75px 50px 0px 50px;
 }
 .header {
@@ -102,7 +238,7 @@
     font-weight: bold;
     text-decoration: underline;
     color: #FD7B01;
-}
+} */
 
 @keyframes slideUp {
   from {
