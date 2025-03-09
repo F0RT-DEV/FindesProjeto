@@ -152,19 +152,99 @@
     .line2 {
         display: none;
     }
-}
+} 
 
-@media (max-width: 480px) {
+ @media screen and (max-width: 400px) and (max-height: 852px) {
+    .homeBody {
+        margin: 20px;
+        padding: 20px;
+    }
+    .ContainerM{
+        margin-top: 80px;
+    }
+    .header{
+        margin-bottom: 50px;
+    }
+    .header span{
+        font-size: 5vw;
+    }
+    .profession {
+       margin-bottom: 20px;
+    }
+    .square{
+        width: 50px;
+        height: 50px;
+    }
+    .senai {
+        font-size: 4vw;
+    }
     .title {
         font-size: 16vw;
+        margin-bottom: 30px;
     }
-
+    .line1{
+        width: 70%;
+        margin-bottom: 30px;
+    }
     .descubra {
         font-size: 6vw;
         padding: 10px 25%;
     }
+    .container7{
+        margin-right: 0;
+        margin-left: 15px;
+    }
     .line2 {
         display: none;
+    }
+} 
+@media screen and (max-width: 375px) and (max-height: 667px){
+    .ContainerM{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 580px) and (max-height: 932px) {
+    .homeBody {
+       background-color: #192196;
+    }
+    .header {
+        margin-top: 110px;
+        margin-bottom: 70px;
+    }
+    .header span{
+        font-size: 5vw;
+    }
+    .profession {
+        margin-bottom: 30px;
+    }
+    .square{
+        width: 50px;
+        height: 50px;
+    }
+    .senai {
+        font-size: 4vw;
+    }
+    .title{
+        margin-bottom: 30px;
+    }
+    .line1{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    .container7{
+        margin-right: 0;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) and (min-height: 750px) and (max-height: 767px){
+    .header{
+        margin-top: -25px;
+    }
+
+    .header span{
+        font-size: 4vw;
     }
 }
 
@@ -197,3 +277,4 @@
   .animate {
     animation: slideIn2 0.9s ease-out forwards;
 }
+

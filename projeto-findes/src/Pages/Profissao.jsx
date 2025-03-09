@@ -14,7 +14,7 @@ function Profissao() {
   }, []);
 
   const jobOptions = [
-    ["Estagiário/Aprendiz", "Autônomo", "Auxiliar Administrativo", "Motorista", "Auxiliar de Serviços Gerais", "Atendente"],
+    ["Estagiário / Aprendiz", "Autônomo", "Auxiliar Administrativo", "Motorista", "Auxiliar de Serviços Gerais", "Atendente"],
     ["Vendedor", "Auxiliar de Logística", "Administrador", "Analista Financeiro", "Mecânico", "Eletricista"],
     ["Gerente", "Arquiteto", "Porteiro", "Zelador", "Professor(a)", "Contador(a)"]
   ];

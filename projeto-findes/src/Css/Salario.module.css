@@ -112,25 +112,61 @@
     text-decoration: underline;
     color: #FD7B01;
 }
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         text-align: center;
     }
-    .header p {
-        margin-right: 30px;
-    }
+   
     .options {
       grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
   }
 }
 @media (max-width: 480px) {
-    .header p {
-        margin-right: 30px;
+    .options {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 380px) and (max-height: 830px) {
+    .header h1{
+        font-size: 30px;
+    }
+    .header p{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 375px) and (max-height: 667px){
+    .header{
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    .header p{
+      font-size: 13px;
+      margin-top: 20px;
     }
     .options {
-      grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+      }
+      .option {
+        font-size: 17px;
+      }
+}
+@media screen and (max-width: 575px) and (min-height: 750px) and (max-height: 767px){
+    .header{
+        margin-top: -50px;
     }
+    .header p{
+      font-size: 15px;
+      margin-top: 10px;
+    }
+}
+@media screen and (min-width: 390px) and (max-height: 860px){
+    .header{
+        margin-bottom: 50px;
+    }
+    
 }
 
 @keyframes slideIn {
@@ -172,14 +208,13 @@
       opacity: 0;
       transform: translateX(-30%);
     }
-  }
+}
   
-
-  .fadeOut1 {
+.fadeOut1 {
     animation: slideInRight2 0.9s ease-out forwards;
-  }
+}
 
-  @keyframes slideUpExit {
+@keyframes slideUpExit {
     from {
       transform: translateY(0);
       opacity: 1;
@@ -188,8 +223,8 @@
       transform: translateY(-50px);
       opacity: 0;
     }
-  }
-  
-  .exitAnimation2 {
+}
+
+.exitAnimation2 {
     animation: slideUpExit 0.8s ease-in-out forwards;
-  }
+}
