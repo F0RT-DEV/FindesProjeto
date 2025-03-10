@@ -109,6 +109,10 @@
 
 /* Responsividade */
 @media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
     .title {
         font-size: 120px;
         line-height: 130px;
@@ -120,8 +124,11 @@
         font-size: 25px;
     }
 }
-
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
     .title {
         display: flex;
         justify-content: center;
@@ -132,7 +139,6 @@
     }
     .profession {
         font-size: 20px;
-        flex-direction: column;
         text-align: center;
     }
     .square {
@@ -148,7 +154,6 @@
         margin-top: 80px;
     }
 }
-
 @media (max-width: 480px) {
     .header{
         flex-direction: column;
@@ -176,6 +181,104 @@
     }
     .links ul {
         flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 380px) and (max-height: 830px){
+    .header{
+        margin-top: 40px;
+    }
+    .title{
+        font-size: 50px;
+        line-height: 60px;
+        align-items: center;
+    }
+    .containerText{
+        margin-left: 0px;
+    }
+    .containerText .title{
+        margin-left: 50px;
+    }
+    .containerText .links{
+        margin-left: 10px;
+    }
+    .profession {
+       margin-bottom: 20px;
+    }
+    .senai {
+        font-size: 4vw;
+    }
+    .line1{
+        width: 70% !important;
+    }
+}
+@media screen and (max-width: 375px) and (max-height: 667px){
+    .header{
+        margin-top: 10px;
+    }
+    .header span{
+      font-size: 15px;
+      margin-bottom: -6px;
+    }
+    .senai{
+        font-size: 3vw;
+        margin-top: -10px;
+    }
+    .title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .containerText{
+        margin-left: 20px;
+    }
+    .links{
+        margin-top: 10px;
+    }
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+    .links li{
+        margin-top: -20px;
+    }
+}
+@media screen and (min-width: 393px) and (max-width: 400px) and (min-height: 850px) and (max-height: 852px) {
+    .header{
+      margin-bottom: 50px;
+    }
+    .title{
+      font-size: 50px;
+      line-height: 50px;
+    }
+    .containerText{
+      margin-left: 20px;
+    }
+    .containerText .title{
+      margin-left: 40px;
+    }
+}
+@media screen and (max-width: 575px) and (min-height: 750px) and (max-height: 780px){
+    .header{
+        flex-wrap: wrap;
+    }
+    .header span{
+        font-size: 15px;
+    }
+    .senai{
+        font-size: 2.5vw;
+        margin-bottom: 30px;
+    }
+    .title{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .links{
+        margin-top: 10px;
+    }
+    .links li{
+        margin-top: -50px;
+    }
+    .containerText{
+        margin-left: 100px;
     }
 }
 @keyframes slideUp {

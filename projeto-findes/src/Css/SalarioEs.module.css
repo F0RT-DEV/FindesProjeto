@@ -99,7 +99,6 @@
         font-size: 25px;
     }
 }
-
 @media (max-width: 768px) {
     h1 {
         font-size: 50px;
@@ -114,26 +113,103 @@
         font-size: 40px;
     }
 }
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 40px;
-        line-height: 50px;
+@media screen and (max-width: 380px) and (max-height: 830px) {
+    .header{
+      margin-bottom: 20px;
+      margin-top: 80px;
     }
-   
-    .buttuns a {
-        font-size: 20px;
+    .header h1{
+      font-size: 40px;
+      margin-bottom: 90px;
+    
     }
-    .buttuns {
+    .option{
+      font-size: 25px;
+      height: 100px;
+      margin-bottom: 40px;
+    }
+    .buttuns{
       flex-wrap: nowrap;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    .option {
-        width: 90%;
-        height: 100px;
-        font-size: 30px;
+    .buttuns svg{
+      width: 20px;
+      height: 20px;
+    }
+    .buttuns a{
+      font-size: 20px;
+    }
+}
+@media screen and (max-width: 375px) and (max-height: 667px){
+    .header{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .header h1{
+      font-size: 30px;
+    }
+    .option{
+      font-size: 20px;
+      height: 100px;
+      margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 393px) and (max-width: 400px) and (min-height: 850px) and (max-height: 852px) {
+    .header{
+      margin-bottom: 90px;
+      margin-top: 100px;
+    }
+    .header h1{
+      font-size: 50px;
+    }
+    .option{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .buttuns{
+        flex-wrap: nowrap;
+    }
+    .buttuns svg{
+        width: 30px;
+        height: 30px;
+    }
+    .buttuns a{
+     font-size: 20px;
+    }
+}
+@media screen and (max-width: 575px) and (min-height: 750px) and (max-height: 780px){
+    .header{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .header h1{
+      font-size: 50px;
+    }
+    .option{
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 430px) and (max-width: 580px) and (min-height: 842px) and (max-height: 932px) {
+    .header h1{
+      font-size: 50px;
+    }
+    .header{
+       margin-top: 110px;
+       margin-bottom: 100px;
+    }
+    .option{
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+    .buttuns{
+        flex-wrap: nowrap;
+    }
+    .buttuns svg{
+        width: 30px;
+        height: 30px;
+    }
+    .buttuns a{
+     font-size: 25px;
     }
 }
 
