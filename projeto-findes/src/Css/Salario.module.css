@@ -10,6 +10,7 @@
 
 .container2 {
     margin: 75px 5vw 0px 5vw;
+    height: 100vh;
 }
 
 .header {
@@ -163,17 +164,32 @@
       margin-top: 10px;
     }
 }
-@media screen and (min-width: 390px) and (max-width: 396px) and (max-height: 852px) and (max-height: 860px){
+@media screen and (max-width: 396px) and (min-width: 390px) and (max-height: 852px) and (max-height: 860px){
     .header{
         margin-bottom: 50px;
     }  
 }
 
-@media screen  and (min-width: 1700px) {
-    .header h1{
-        font-size: 100px;
-        margin-bottom: 140px;
+@media (min-width: 1700px) {
+    .header{
+        margin-bottom: 200px;
     }
+    .header h1{
+        font-size: 6vw;
+    }
+    .header p{
+        font-size: 30px;
+    }
+    .options {
+        gap: 50px;
+
+    }
+   .option{
+    height: 100px;
+    width: 100%;
+    max-width: 520px;
+    font-size: 35px;
+   }
 }
     
 @keyframes slideIn {

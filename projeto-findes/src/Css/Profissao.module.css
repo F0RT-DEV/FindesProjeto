@@ -5,6 +5,7 @@
     background-color: #ffffff;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .container1 {
@@ -16,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     flex-wrap: wrap;
     text-align: center;
 }
@@ -173,6 +174,37 @@
   .header p{
     font-size: 13px;
     margin-top: 10px;
+  }
+}
+@media (min-width: 1700px) {
+  .profissaoBody {
+    overflow: hidden;
+  }
+  .container1 {
+    margin: 80px 6vw 0px 6vw;
+  }
+  .header{
+      margin-bottom: 150px;
+  }
+  .header p{
+      font-size: 30px;
+  }
+  .options {
+      gap: 50px;
+  }
+ .option{
+    height: 100px;
+    width: 100%;
+    max-width: 530px;
+    font-size: 35px;
+ }
+ .pagination {
+    margin-top: 40px;
+    font-size: 25px;
+  }
+  svg {
+    width: 60px;
+    height: 60px;
   }
 }
 @keyframes slideUp {
