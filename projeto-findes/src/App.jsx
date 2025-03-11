@@ -6,6 +6,7 @@ import Salario from './Pages/Salario';
 import Cursos from './Pages/Cursos';
 import SalarioEstimado from './Pages/SalarioEstimado';
 import Fim from './Pages/Fim';
+import './App.css';
 
 function App() {
   return (
