@@ -129,13 +129,6 @@ const [isExiting2, setIsExiting2] = useState(false);
         </button>
     ))}
 </div>
-            {/* <div className={Styles.options}>
-                {cursosOption[currentPage].map((curso, index) => (
-                    <button key={index} className={Styles.option} onClick={() => selectOption(curso)}>
-                        {curso}
-                    </button>
-                ))}
-            </div> */}
             <div className={Styles.pagination}>
                 {cursosOption.map((_, index) => (
                     <span

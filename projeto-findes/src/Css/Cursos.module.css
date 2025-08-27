@@ -125,8 +125,46 @@
      align-items: center;
   }
 .options {
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
 }
+.container3 {
+  margin-top: 30px !important;
+  margin-bottom: 0 !important;
+}
+.header h1 {
+  font-size: 7vw !important;
+  margin-bottom: 10px !important;
+}
+.option {
+  font-size: 4vw !important;
+  min-width: 140px;
+  height: 50px;
+  margin-top: 10px;
+}
+.buttons {
+  margin-top: 0 !important;
+}
+}
+@media (min-width: 400px) and (max-width: 900px) {
+  .container3 {
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+  }
+  .header h1 {
+    font-size: 6vw !important;
+    margin-bottom: 10px !important;
+  }
+  .option {
+    font-size: 3vw !important;
+    min-width: 120px;
+    height: 45px;
+    margin-top: 10px;
+  }
+  .buttons {
+    margin-top: 0 !important;
+  }
 }
 @media screen and (max-width: 380px) and (max-height: 830px) {
   .header{
@@ -139,10 +177,15 @@
     font-size: 11px;
   }
   .option{
-    font-size: 15px;
+    font-size: 13px;
+    padding: 8px 0;
+    min-width: 120px;
+    height: 45px;
   }
   .options {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: center;
   }
 }
 @media screen and (max-width: 375px) and (max-height: 667px){
@@ -157,6 +200,17 @@
     font-size: 11px;
     margin-top: 20px;
   }
+  .option{
+    font-size: 12px;
+    min-width: 100px;
+    height: 40px;
+    padding: 6px 0;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
 }
 @media screen and (min-width: 393px) and (max-width: 400px) and (min-height: 850px) and (max-height: 852px) {
   .header{
@@ -170,7 +224,15 @@
     margin-top: 10px;
   }
   .option{
-    font-size: 17px;
+    font-size: 15px;
+    min-width: 120px;
+    height: 45px;
+    padding: 8px 0;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    justify-items: center;
   }
 }
 @media screen and (max-width: 575px) and (min-height: 750px) and (max-height: 780px){
@@ -185,6 +247,17 @@
     font-size: 13px;
     margin-top: 10px;
   }
+  .option{
+    font-size: 15px;
+    min-width: 120px;
+    height: 45px;
+    padding: 8px 0;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    justify-items: center;
+  }
 }
 @media screen and (min-width: 430px) and (max-width: 580px) and (min-height: 842px) and (max-height: 932px) {
   .header h1{
@@ -198,7 +271,15 @@
     margin-top: 10px;
   }
   .option{
-    font-size: 17px;
+    font-size: 15px;
+    min-width: 120px;
+    height: 45px;
+    padding: 8px 0;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-items: center;
   }
 }
 @media (min-width: 1700px) {
