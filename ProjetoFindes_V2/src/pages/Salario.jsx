@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { DollarSign } from "lucide-react";
@@ -32,7 +33,56 @@ const Salario = () => {
 
       <div className="page-content">
         {/* Header */}
-        {/* ...continua... */}
+        <div className={`section-header transition-all duration-500 ${isExiting ? 'opacity-0 transform -translate-y-8' : 'opacity-100'}`}>
+          <div className="flex items-center justify-center mb-6">
+            <DollarSign className="w-12 h-12 text-primary mr-4 animate-pulse-glow" />
+            <h1 className="text-4xl md:text-6xl font-bold animate-slide-up">
+              Qual{" "}
+              <span className="text-gradient-primary">
+                Sua<br />Faixa Salarial?
+              </span>
+            </h1>
+          </div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            MARQUE A OPÇÃO QUE MELHOR SE<br />
+            ENCAIXA AO SEU <span className="text-gradient-secondary font-semibold">ATUAL EMPREGO</span>
+          </p>
+        </div>
+
+        {/* Salary Options */}
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto transition-all duration-500 ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'}`}>
+          {salaryRanges.map((faixa, index) => (
+            <button
+              key={index}
+              className="btn-option group relative overflow-hidden animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={handleOptionClick}
+            >
+              <div className="flex items-center justify-between">
+                <span className="relative z-10 text-lg font-medium">{faixa}</span>
+                <DollarSign className="w-5 h-5 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
+              </div>
+              
+              {/* Hover Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-accent/0 group-hover:from-primary/10 group-hover:via-primary/15 group-hover:to-accent/10 transition-all duration-500" />
+              
+              {/* Progress Indicator */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-border">
+                <div 
+                  className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700 group-hover:w-full w-0"
+                />
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Info Card */}
+        <div className="card-elevated max-w-md mx-auto mt-12 p-6 text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <h3 className="text-lg font-semibold mb-2 text-gradient-secondary">💡 Dica</h3>
+          <p className="text-muted-foreground text-sm">
+            Sua faixa salarial atual nos ajuda a calcular o potencial de crescimento com os cursos do SENAI
+          </p>
+        </div>
       </div>
     </div>
   );
