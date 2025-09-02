@@ -155,7 +155,7 @@ const Cursos = () => {
               </div>
               
               {/* Course Icon */}
-              <BookOpen className="absolute top-4 right-4 w-6 h-6 text-accent opacity-30 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
+              <BookOpen className="absolute top-1 right-4 w-6 h-6 text-accent opacity-30 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
               
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-accent/0 to-secondary/0 group-hover:from-primary/10 group-hover:via-accent/5 group-hover:to-secondary/10 transition-all duration-500" />

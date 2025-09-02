@@ -54,13 +54,13 @@ const Index = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="animate-scale-in" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-scale-in flex justify-center" style={{ animationDelay: '0.4s' }}>
             <button
               onClick={handleExploreClick}
-              className="btn-hero group relative text-2xl px-12 py-6"
+              className="btn-hero group relative text-2xl px-12 py-6 flex items-center justify-center gap-3"
             >
-              DESCUBRA
-              <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+              <span>DESCUBRA</span>
+              <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
             </button>
           </div>
 

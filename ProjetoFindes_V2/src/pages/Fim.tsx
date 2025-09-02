@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Home, Twitter, Youtube, Send, Instagram, Sparkles, Rocket } from "lucide-react";
+import { Home, Youtube, Send, Instagram, Sparkles, Rocket, Linkedin } from "lucide-react";
+import XIcon from "../components/ui/XIcon.jsx";
 
 const Fim = () => {
   const navigate = useNavigate();
@@ -99,10 +100,10 @@ const Fim = () => {
             <h3 className="text-lg font-semibold mb-6 text-gradient-secondary">Siga o SENAI nas redes sociais</h3>
             <div className="flex justify-center space-x-4">
               {[
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Youtube, href: "#", label: "YouTube" },
-                { icon: Send, href: "#", label: "Telegram" },
-                { icon: Instagram, href: "#", label: "Instagram" }
+                { icon: XIcon, href: "https://x.com/senainacional", label: "X" },
+                { icon: Youtube, href: "https://www.youtube.com/senaibr", label: "YouTube" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/senai-nacional", label: "LinkedIn" },
+                { icon: Instagram, href: "https://www.instagram.com/senai_nacional/", label: "Instagram" }
               ].map(({ icon: Icon, href, label }, index) => (
                 <a
                   key={label}
@@ -125,17 +126,17 @@ const Fim = () => {
               Entre em contato conosco e inicie sua transformação profissional hoje mesmo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              {/* <a 
                 href="tel:0800-555-0199" 
                 className="btn-secondary"
               >
                 📞 0800 555 0199
-              </a>
+              </a> */}
               <a 
-                href="mailto:info@senai.br" 
+                href="https://www.senai.portaldaindustria.com.br/canais-de-atendimento" 
                 className="btn-secondary"
               >
-                ✉️ info@senai.br
+                ✉️ Canais de Atendimento
               </a>
             </div>
           </div>

@@ -97,11 +97,11 @@ const Profissao = () => {
           {jobOptions[currentPage].map((job, index) => (
             <button
               key={index}
-              className={`btn-option text-left transition-all duration-300`}
+              className={`btn-option flex items-center justify-center text-center transition-all duration-300 min-h-[64px] min-w-[180px]`}
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => handleJobClick(job)}
             >
-              <span className="relative z-10">{job}</span>
+              <span className="relative z-10 w-full">{job}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-accent/10 rounded-xl transition-all duration-300" />
             </button>
           ))}
