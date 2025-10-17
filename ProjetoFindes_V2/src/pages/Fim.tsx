@@ -11,14 +11,14 @@ const Fim = () => {
 
   return (
     <div className="page-container bg-dots">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10" />
       <div className="absolute top-16 left-16 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute top-20 right-20 w-24 h-24 bg-secondary/25 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-20 left-20 w-28 h-28 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
       <div className="page-content">
-        {/* Header */}
+        
         <header className="w-full max-w-6xl mx-auto mb-16 animate-slide-up">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-4">
@@ -33,9 +33,9 @@ const Fim = () => {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         </header>
 
-        {/* Main Content */}
+        
         <main className="text-center space-y-12">
-          {/* Success Message */}
+          
           <div className="section-header animate-scale-in">
             <div className="flex items-center justify-center mb-6">
               <Sparkles className="w-16 h-16 text-primary mr-4 animate-pulse-glow" />
@@ -56,7 +56,7 @@ const Fim = () => {
             </p>
           </div>
 
-          {/* Action Buttons */}
+          
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <button
               onClick={handleBack}
@@ -77,7 +77,7 @@ const Fim = () => {
             </a>
           </div>
 
-          {/* Success Stats */}
+          
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="card-feature text-center">
               <div className="text-3xl font-bold text-gradient-primary mb-2">95%</div>
@@ -95,7 +95,7 @@ const Fim = () => {
             </div>
           </div>
 
-          {/* Social Links */}
+          
           <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
             <h3 className="text-lg font-semibold mb-6 text-gradient-secondary">Siga o SENAI nas redes sociais</h3>
             <div className="flex justify-center space-x-4">
@@ -119,7 +119,7 @@ const Fim = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
+          
           <div className="card-elevated max-w-2xl mx-auto p-8 animate-scale-in" style={{ animationDelay: '1s' }}>
             <h3 className="text-2xl font-bold mb-4 text-gradient-hero">Pronto para começar?</h3>
             <p className="text-muted-foreground mb-6">

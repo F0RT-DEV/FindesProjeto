@@ -26,7 +26,6 @@ const App = () => (
           <Route path="/cursos" element={<Cursos />} />
           <Route path="/salarioEstimado" element={<SalarioEstimado />} />
           <Route path="/fim" element={<Fim />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

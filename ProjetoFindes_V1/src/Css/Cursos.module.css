@@ -5,6 +5,9 @@
   background-color: #222FE6;
   margin: 0;
   padding: 0;
+  /* permitir rolagem vertical em dispositivos móveis */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .container3 {

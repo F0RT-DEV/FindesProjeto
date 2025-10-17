@@ -6,7 +6,6 @@
 
 @layer base {
   :root {
-    /* Core Colors - SENAI inspired palette */
     --background: 220 26% 6%;
     --background-secondary: 220 26% 8%;
     --foreground: 210 40% 98%;
@@ -17,16 +16,16 @@
     --popover: 220 26% 8%;
     --popover-foreground: 210 40% 98%;
 
-    /* SENAI Brand Colors */
-    --primary: 25 88% 58%; /* SENAI Orange */
+
+    --primary: 25 88% 58%; 
     --primary-foreground: 220 26% 6%;
     --primary-glow: 25 88% 68%;
 
-    --secondary: 215 100% 60%; /* SENAI Blue */
+    --secondary: 215 100% 60%; 
     --secondary-foreground: 210 40% 98%;
     --secondary-glow: 215 100% 70%;
 
-    --accent: 280 88% 65%; /* Modern Purple */
+    --accent: 280 88% 65%; 
     --accent-foreground: 210 40% 98%;
     --accent-glow: 280 88% 75%;
 
@@ -42,24 +41,24 @@
 
     --radius: 1rem;
 
-    /* Gradients */
+    
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 26% 10%));
 
-    /* Shadows */
+    
     --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.3);
     --shadow-medium: 0 8px 32px -8px hsl(var(--primary) / 0.4);
     --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.6);
     --shadow-card: 0 8px 32px -8px hsl(220 26% 4% / 0.8);
 
-    /* Animations */
+    
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Spacing */
+   
     --nav-height: 5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -134,7 +133,7 @@
 }
 
 @layer components {
-  /* Button Variants */
+  
   .btn-hero {
     position: relative;
     overflow: hidden;
@@ -222,7 +221,7 @@
     transform: scale(1.1);
   }
 
-  /* Card Styles */
+  
   .card-elevated {
     background: linear-gradient(to bottom right, hsl(var(--card)), hsl(var(--background-secondary)));
     border: 1px solid hsl(var(--border) / 0.5);
@@ -266,7 +265,7 @@
     opacity: 1;
   }
 
-  /* Text Styles */
+  
   .text-gradient-primary {
     @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
   }
@@ -283,7 +282,7 @@
     @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
   }
 
-  /* Layout Components */
+
   .page-container {
     @apply min-h-screen bg-gradient-to-br from-background via-background-secondary to-background
            relative overflow-hidden;
@@ -297,7 +296,7 @@
     @apply text-center mb-12 max-w-4xl mx-auto;
   }
 
-  /* Animations */
+  
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -326,7 +325,7 @@
     animation: scale-in 0.5s ease-out forwards;
   }
 
-  /* Background Effects */
+  
   .bg-grid {
     background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
     background-size: 40px 40px;

@@ -5,12 +5,16 @@
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    /* evitar bloquear o scroll: usar min-height em vez de height quando possível */
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .container2 {
     margin: 75px 5vw 0px 5vw;
-    height: 100vh;
+    /* permitir que o conteúdo cresça e ative scroll no body se necessário */
+    min-height: 100vh;
 }
 
 .header {

@@ -4,7 +4,10 @@
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+  /* permitir rolagem vertical quando necessário; manter overflow-x oculto se desejar evitar scroll horizontal */
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .container4 {

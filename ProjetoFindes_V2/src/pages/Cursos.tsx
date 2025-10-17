@@ -84,13 +84,13 @@ const Cursos = () => {
 
   return (
     <div className="page-container bg-dots">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       <div className="absolute top-12 right-12 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-float" />
       <div className="absolute bottom-20 left-12 w-32 h-32 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '0.8s' }} />
 
       <div className="page-content">
-        {/* Header */}
+        
         <div className={`section-header transition-all duration-500 ${isExiting ? 'opacity-0 transform -translate-y-8' : 'opacity-100'}`}>
           <div className="flex items-center justify-center mb-6">
             <BookOpen className="w-12 h-12 text-accent mr-4 animate-pulse-glow" />
@@ -110,7 +110,6 @@ const Cursos = () => {
           </p>
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex justify-between items-center w-full max-w-5xl mx-auto mb-8">
           {currentPage > 0 ? (
             <button 
@@ -135,7 +134,6 @@ const Cursos = () => {
           )}
         </div>
 
-        {/* Course Options */}
         <div 
           key={animationKey} 
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8 ${animationDirection} ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'} transition-all duration-500`}
@@ -154,13 +152,10 @@ const Cursos = () => {
                 </p>
               </div>
               
-              {/* Course Icon */}
               <BookOpen className="absolute top-1 right-4 w-6 h-6 text-accent opacity-30 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
               
-              {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-accent/0 to-secondary/0 group-hover:from-primary/10 group-hover:via-accent/5 group-hover:to-secondary/10 transition-all duration-500" />
               
-              {/* Bottom Border Effect */}
               <div className="absolute bottom-0 left-0 w-full h-1 bg-border">
                 <div className="h-full bg-gradient-to-r from-primary via-accent to-secondary transition-all duration-700 group-hover:w-full w-0" />
               </div>
@@ -168,7 +163,6 @@ const Cursos = () => {
           ))}
         </div>
 
-        {/* Pagination */}
         <div className="flex space-x-2 justify-center mb-8">
           {cursosOption.map((_, index) => (
             <button
@@ -183,7 +177,6 @@ const Cursos = () => {
           ))}
         </div>
 
-        {/* Info Card */}
         <div className="card-elevated max-w-md mx-auto p-6 text-center animate-fade-in" style={{ animationDelay: '1s' }}>
           <h3 className="text-lg font-semibold mb-2 text-gradient-accent">🎯 Escolha Inteligente</h3>
           <p className="text-muted-foreground text-sm">

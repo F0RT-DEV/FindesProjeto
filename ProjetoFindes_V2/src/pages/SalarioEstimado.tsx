@@ -33,13 +33,13 @@ const SalarioEstimado = () => {
 
   return (
     <div className="page-container bg-grid">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-primary/10" />
       <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-20 w-28 h-28 bg-secondary/25 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
 
       <div className="page-content">
-        {/* Header */}
+        
         <div className={`section-header transition-all duration-500 ${isExiting ? 'opacity-0 transform -translate-y-8' : 'opacity-100'}`}>
           <div className="flex items-center justify-center mb-6">
             <Trophy className="w-12 h-12 text-primary mr-4 animate-pulse-glow" />
@@ -52,7 +52,7 @@ const SalarioEstimado = () => {
           </div>
         </div>
 
-        {/* Course Info Card */}
+        
         {selectedCourse && (
           <div className="card-elevated max-w-md mx-auto p-6 mb-8 animate-scale-in">
             <div className="text-center">
@@ -63,10 +63,10 @@ const SalarioEstimado = () => {
           </div>
         )}
 
-        {/* Salary Display */}
+        
         <div className={`max-w-2xl mx-auto mb-12 transition-all duration-500 ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'}`}>
           <div className="card-elevated p-8 text-center relative overflow-hidden group">
-            {/* Background Pattern */}
+            
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <div className="relative z-10">
@@ -78,13 +78,13 @@ const SalarioEstimado = () => {
               <p className="text-muted-foreground">por mês após concluir o curso</p>
             </div>
 
-            {/* Decorative Elements */}
+            
             <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-full blur-xl" />
             <div className="absolute bottom-4 left-4 w-8 h-8 bg-accent/10 rounded-full blur-lg" />
           </div>
         </div>
 
-        {/* Benefits Cards */}
+        
         <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="card-feature text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-full flex items-center justify-center mx-auto mb-4">
@@ -111,7 +111,7 @@ const SalarioEstimado = () => {
           </div>
         </div>
 
-        {/* Navigation Buttons */}
+        
         <div className={`flex justify-center gap-6 transition-all duration-500 ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'}`}>
           <button 
             onClick={handleBack}

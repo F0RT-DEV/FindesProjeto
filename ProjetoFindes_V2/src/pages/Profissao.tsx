@@ -41,13 +41,13 @@ const Profissao = () => {
 
   return (
     <div className="page-container bg-dots">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5" />
       <div className="absolute top-20 right-10 w-24 h-24 bg-accent/20 rounded-full blur-2xl animate-float" />
       <div className="absolute bottom-10 left-20 w-36 h-36 bg-primary/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
 
       <div className="page-content">
-        {/* Header */}
+        
         <div className={`section-header transition-all duration-500 ${isExiting ? 'opacity-0 transform -translate-y-8' : 'opacity-100'}`}>
           <h1 
             key={animationKey}
@@ -64,7 +64,7 @@ const Profissao = () => {
           </p>
         </div>
 
-        {/* Navigation Buttons */}
+        
         <div className="flex justify-between items-center w-full max-w-4xl mx-auto mb-8">
           {currentPage > 0 ? (
             <button 
@@ -89,7 +89,7 @@ const Profissao = () => {
           )}
         </div>
 
-        {/* Job Options */}
+        
         <div 
           key={animationKey} 
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8 ${animationDirection} ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'} transition-all duration-500`}
@@ -107,7 +107,7 @@ const Profissao = () => {
           ))}
         </div>
 
-        {/* Pagination */}
+        
         <div className="flex space-x-2 justify-center">
           {jobOptions.map((_, index) => (
             <button

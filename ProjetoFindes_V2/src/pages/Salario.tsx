@@ -25,13 +25,13 @@ const Salario = () => {
 
   return (
     <div className="page-container bg-grid">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-secondary/5" />
       <div className="absolute top-16 left-16 w-28 h-28 bg-secondary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-16 right-16 w-32 h-32 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
 
       <div className="page-content">
-        {/* Header */}
+        
         <div className={`section-header transition-all duration-500 ${isExiting ? 'opacity-0 transform -translate-y-8' : 'opacity-100'}`}>
           <div className="flex items-center justify-center mb-6">
             <DollarSign className="w-12 h-12 text-primary mr-4 animate-pulse-glow" />
@@ -48,7 +48,6 @@ const Salario = () => {
           </p>
         </div>
 
-        {/* Salary Options */}
         <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto transition-all duration-500 ${isExiting ? 'opacity-0 transform scale-95' : 'opacity-100'}`}>
           {salaryRanges.map((faixa, index) => (
             <button
@@ -62,10 +61,8 @@ const Salario = () => {
                 <DollarSign className="w-5 h-5 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-accent/0 group-hover:from-primary/10 group-hover:via-primary/15 group-hover:to-accent/10 transition-all duration-500" />
               
-              {/* Progress Indicator */}
               <div className="absolute bottom-0 left-0 w-full h-1 bg-border">
                 <div 
                   className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700 group-hover:w-full w-0"
@@ -75,7 +72,6 @@ const Salario = () => {
           ))}
         </div>
 
-        {/* Info Card */}
         <div className="card-elevated max-w-md mx-auto mt-12 p-6 text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <h3 className="text-lg font-semibold mb-2 text-gradient-secondary">💡 Dica</h3>
           <p className="text-muted-foreground text-sm">
